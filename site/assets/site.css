@@ -814,3 +814,6 @@ html[lang="ar"] .rail-groups button { font-size: 1.0625rem; line-height: 1.5; }
 
 /* page cards: <picture> must not change the thumb layout */
 .card--page .card__thumb picture { display: contents; }
+
+/* Black kit = dark page: the accent flips to paper-white so buttons stay visible */
+:root[data-theme="dark"][data-kit="black"] { --accent: #f1f2ef; --accent-ink: #121316; }

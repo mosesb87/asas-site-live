@@ -69,6 +69,10 @@
   function setKit(k, persist = true) {
     if (!KITS.some(x => x[0] === k)) k = 'blueprint';
     html.setAttribute('data-kit', k);
+    // Black and White are the two whole-page looks: Black turns the page dark, White keeps it light.
+    if (k === 'black') html.setAttribute('data-theme', 'dark');
+    else if (k === 'white') html.setAttribute('data-theme', 'light');
+    else html.removeAttribute('data-theme');
     if (persist) store.set('asas-kit', k);
     $$('[data-kit-name]').forEach(el => { el.textContent = kitName(k); });
     $$('.kit[data-kit]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.kit === k)));
