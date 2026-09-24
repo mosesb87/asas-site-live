@@ -811,3 +811,6 @@ html[lang="ar"] input[type="email"]::placeholder { text-align: right; }
 .rail-groups button .n { font-size: 13px; opacity: 0.55; }
 html[lang="ar"] .rail-groups h4 { font-size: var(--t-sm); font-weight: 600; color: var(--ink); margin-bottom: var(--s-3); }
 html[lang="ar"] .rail-groups button { font-size: 1.0625rem; line-height: 1.5; }
+
+/* page cards: <picture> must not change the thumb layout */
+.card--page .card__thumb picture { display: contents; }
