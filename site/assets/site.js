@@ -284,6 +284,7 @@
     const href = opts.link || (b.slug === 'wajha-176' ? PFX + '/block/wajha-176/' : 'https://asas.build/studio/?block=' + b.slug + (AR ? '&g=ar' : ''));
     const fn = famName(fam);
     return `<article class="card" data-slug="${b.slug}" data-family="${b.family}" data-layout="${b.layout}" data-q="${(b.name + ' ' + b.gloss + ' ' + fam.latin + ' ' + fam.name + ' ' + (AR_FAM[b.family] || '') + ' ' + b.slug + ' ' + b.ar_name).toLowerCase()}">
+      <div class="card__media">
       <a class="card__thumb" href="${href}" data-cursor="${T.preview}" aria-label="${T.previewAria(AR ? b.ar_name : b.name, AR ? b.name : b.gloss, fn)}">
         <img src="${b.img}" alt="${T.blockAlt(fn, AR ? b.ar_name : b.name)}" loading="lazy" width="640" height="440">
         <div class="card__struct" aria-hidden="true">${struct(b.slug)}</div>
@@ -291,6 +292,7 @@
       </a>
       <div class="card__act">
         <button type="button" class="btn btn--sm btn--stack" data-stack="${b.slug}" aria-pressed="false">${T.stack}</button>
+      </div>
       </div>
       <div class="card__meta">
         ${AR ? `<div class="card__name">${b.ar_name}<span class="lat">${b.name}</span><small>${fam.ar || ''} ${b.slug.split('-')[1] || ''}</small></div>`
@@ -302,8 +304,7 @@
   function pageHTML(p) {
     return `<article class="card card--page" data-slug="${p.slug}" data-type="${p.type}" data-q="${(p.name + ' ' + p.gloss + ' ' + p.type + ' ' + p.ar_name).toLowerCase()}">
       <a class="card__thumb" href="https://asas.build/studio/?stack=${p.recipe.join(',')}${AR ? '&g=ar' : ''}" data-cursor="${T.open}" aria-label="${T.pageAria(AR ? p.ar_name : p.name, typeName(p.type))}">
-        <img src="${p.img}" alt="${T.pageAlt(typeName(p.type), AR ? p.ar_name : p.name, T.blocks(p.blocks))}" loading="lazy" width="640" height="960">
-        <span class="card__tag">${typeName(p.type)} · ${T.blocks(p.blocks)}</span>
+        <img src="${p.img}" alt="${T.pageAlt(typeName(p.type), AR ? p.ar_name : p.name, T.blocks(p.blocks))}" loading="lazy" width="780" height="1170">
       </a>
       <div class="card__meta">
         ${AR ? `<div class="card__name">${p.ar_name}<span class="lat">${p.name}</span><small>صفحة ${typeName(p.type)}</small></div>`
