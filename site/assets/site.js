@@ -33,7 +33,7 @@
   const famName = f => (AR ? (AR_FAM[f.key] || f.ar) : f.name) || '';
   const typeName = t => AR ? (AR_TYPE[t] || t) : t;
   const FINE = window.matchMedia('(pointer: fine)');
-  const ROOM_PAGE = { hero: '/library/hero-sections/', pricing: '/library/pricing-tables/', faq: '/library/faq-sections/', testimonial: '/library/testimonials/', footer: '/library/footers/', cta: '/library/call-to-action-sections/', team: '/library/team-sections/', contact: '/library/contact-sections/', features: '/library/feature-sections/', error404: '/library/404-pages/' };
+  const ROOM_PAGE = { nav: '/library/headers/', hero: '/library/hero-sections/', pricing: '/library/pricing-tables/', faq: '/library/faq-sections/', testimonial: '/library/testimonials/', footer: '/library/footers/', cta: '/library/call-to-action-sections/', team: '/library/team-sections/', contact: '/library/contact-sections/', features: '/library/feature-sections/', error404: '/library/404-pages/' };
   const track = (name, params) => { try { if (window.gtag) window.gtag('event', name, Object.assign({ site_language: document.documentElement.lang }, params || {})); } catch (e) {} };
   const store = {
     get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
