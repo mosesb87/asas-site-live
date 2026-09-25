@@ -840,3 +840,8 @@ html[lang="ar"] .rail-groups button { font-size: 1.0625rem; line-height: 1.5; }
 /* Footer wordmark and menu hover take the kit colour */
 .bigword { color: var(--accent); opacity: 0.14; transition: color var(--d-base); }
 .nav__links a:hover { color: var(--accent); background: var(--accent-soft); }
+
+/* Room cards: hover fills with the kit colour, and the Arabic title flips with the text so it never disappears */
+.room::before { background: var(--accent); }
+.room:hover, .room:focus-visible { color: var(--accent-ink); }
+.room:hover .room__ar, .room:focus-visible .room__ar { color: var(--accent-ink); }
