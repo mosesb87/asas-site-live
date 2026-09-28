@@ -1,0 +1,23 @@
+Copyright (c) 2026 Mousa Batarseh. All rights reserved.
+
+This software, including its source and compiled code, scoring methods,
+rules, design, text, sample data and name ("the Tool"), is the property of
+Mousa Batarseh (mousabatarseh.com).
+
+You may use the Tool as published on mousabatarseh.com for your own
+evaluation and work.
+
+Without prior written permission from Mousa Batarseh, you may not:
+  - copy, reproduce, modify, translate or create derivative works of the
+    Tool or any part of it;
+  - redistribute, sell, sublicense, host or publish the Tool or any part
+    of it, including its code, rules, scoring weights or design;
+  - use the Tool's name, or a confusingly similar name, for another
+    product or service;
+  - remove or alter this notice.
+
+The Tool is provided "as is", without warranty of any kind. In no event
+shall the author be liable for any claim, damages or other liability
+arising from the use of the Tool.
+
+Permission requests: hireme@mousabatarseh.com
